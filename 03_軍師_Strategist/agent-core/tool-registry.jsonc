@@ -1,0 +1,28 @@
+{
+  // 外銷實驗室 — 國際站 AI 團隊｜軍師 工具註冊配置
+  //
+  // 此文件聲明 Agent 可使用哪些工具（註冊層），與權限層 (policy.jsonl) 正交。
+  //
+  // ⚠️ 維護提醒：profile.jsonc 的 toolInclude 與本文件的 builtin.include 需保持一致。
+  //    若兩邊不同步，以 profile.jsonc 為 Accio 運行時實際依據。
+  "version": 1,
+
+  "preset": "none",
+
+  "builtin": {
+    "include": [
+      "list", "read", "grep", "glob", "ripgrep", "write", "edit",
+      "web_search", "web_fetch", "product_supplier_search",
+      "see_image", "get_time", "get_location", "cron",
+      "ask_user",
+      "memory_search", "memory_get",
+      "task_create", "task_get", "task_update", "task_list",
+      "sessions_list", "sessions_history", "sessions_send"
+    ],
+    "exclude": []
+  },
+
+  "mcp": [],
+  "conditional": [],
+  "notes": "軍師負責市場情報、競品分析、利潤核算與合規風控；以 web 工具與 product_supplier_search 蒐集資料，cron 可用於定期競品監控。"
+}
